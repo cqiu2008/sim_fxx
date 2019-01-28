@@ -1,0 +1,149 @@
+Header (
+	company("EMA Design Automation") 
+	product("TimingDesigner") 
+	rev("9.2") 
+	file("e:/aiprj/sim/sim_fxx/doclzw/tst.td") 
+	date("01/29/2019") time(" 6:16") 
+	format("9.0") 
+	baseScale(1000.000000) 
+	zoomFactor("0.000984567") 
+	zoomBegin(0) 
+	zoomEnd(293495) 
+	nameFrameWidth(213) 
+	simHDL(Verilog) 
+	simDelayMechanism(Transport) 
+	nextID(17) 
+	TimingAnalysisMethod(51) 
+	SDCVersion(0) 
+	
+	generalPrintParams( "printer,,,portrait,clipboard,Letter,default,6,5,in,color,scaleable,mifframe,preview,")
+	diagramPrintParams( "0,2147483647,0,-1,true,true,1,1,true,true,true,true,all,diagramEnd")
+	spreadsheetPrintParams( "0,2147483647,true,false,1,true,all")
+	)
+tclPreferences (UseAboveSixtyFiveNm UseAlteraFastTimingModel 
+	UseActelMaxTimingModel UseTimingPath UseArrivalTime )
+HDLHeader( 
+	hdlFile("") 
+	checkConstraints(true) 
+	comment("") 
+	checkTimeout(never) 
+	
+	command( name("tst") cmdType(null) ))
+DefaultLabel(
+	delay(showNameString,"") 
+	constraint(showNameString,"") 
+	guarantee(showNameString,"") 
+	measure(showMeasure,"") 
+	store(showNameString,"") 
+	wait(showNameString,"") 
+	end(showNameString,"") 
+	boundary(showIncrement,"") 
+	loop(showNameString,"") 
+	waveform(showSkip,"","") 
+	specifiedclock(showSkip,"","") 
+	derivedclock(showSkip,"","") 
+	simwaveform(showSkip,"","") 
+	bus(showValue,"","H") 
+	)
+DiagramStyle (
+	waveformFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	rulerFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	relationshipFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	labelFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	annotationFont(winFont("Arial",80) qtFont("Arial",8) ) 
+	slotHeight("11") 
+	edgeHeight("11") 
+	edgeGrade("1.96261") 
+	inputPenStyle(0) 
+	outputPenStyle(0) 
+	inoutPenStyle(0) 
+	internalPenStyle(0) 
+	vRelationshipPenStyle(0) 
+	hRelationshipPenStyle(0) 
+	inputPenColor(3) 
+	outputPenColor(3) 
+	inoutPenColor(3) 
+	internalPenColor(3) 
+	wavePenWidth("0") 
+	relationshipPenWidth("0") 
+	wavesOnTop 
+	relationshipsOnTop 
+	annotationsOnTop 
+	showSlopedEdges 
+	edgeDisplayType(Uncertainty) 
+	)
+Clock ( objectID(2) name("clk") minheight("0") periodScale(1000.000) period(20.000000) dutyCycle(50.000000) 
+	hdl( direction(internal) ) label(showDefault,"","H") )
+Waveform ( objectID(3) name("sig1") minheight("0") edges(
+	(valid,0.000,0.000,L), 
+	(valid,59000.000,59000.000,label(showText,"33","") ), 
+	(valid,100000.000,100000.000,label(showDefault,"","H") ), 
+	(valid,121000.000,121000.000), 
+	(valid,141000.000,141000.000), 
+	(valid,161000.000,161000.000), 
+	(valid,181000.000,181000.000), 
+	(blank,183150.000,183150.000)) 
+	hdl( direction(internal) ) label(showDefault,"","H") )
+Bus ( objectID(4) name("sig2") DiagramStyle (
+	waveformFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	rulerFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	relationshipFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	labelFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	annotationFont(winFont("Arial",80) qtFont("Arial",8) ) 
+	slotHeight("11") 
+	edgeHeight("11") 
+	edgeGrade("1.88073") 
+	inputPenStyle(0) 
+	outputPenStyle(0) 
+	inoutPenStyle(0) 
+	internalPenStyle(0) 
+	vRelationshipPenStyle(0) 
+	hRelationshipPenStyle(0) 
+	inputPenColor(9) 
+	outputPenColor(9) 
+	inoutPenColor(9) 
+	internalPenColor(9) 
+	wavePenWidth("0") 
+	relationshipPenWidth("0") 
+	wavesOnTop 
+	relationshipsOnTop 
+	annotationsOnTop 
+	showSlopedEdges 
+	edgeDisplayType(Uncertainty) 
+	customWavePattern 
+	)
+minheight("0") edges(
+	(valid,0.000,0.000,L), 
+	(valid,80000.000,80000.000), 
+	(invalid,101000.000,101000.000), 
+	(valid,123000.000,123000.000), 
+	(valid,138000.000,138000.000), 
+	(invalid,158000.000,158000.000), 
+	(valid,171000.000,171000.000), 
+	(blank,173150.000,173150.000)) 
+	hdl( direction(internal) ) label(showDefault,"","H") )
+SimWaveform ( objectID(5) name("sig3") minheight("0") edges(
+	(blank,0.000,0.000,L)) 
+	hdl( direction(internal) calcInit ) label(showDefault,"","H") )
+Grid ( "clk" topWave("clk") 
+	 color(7) 1stWidth(0) 2ndWidth(0) 1stStyle(0) 2ndStyle(0) 
+  show1st show2nd )
+Annotation( value("33") Edge("sig2",0) origin(38165.081,0.000) stateCentered )
+EndCycleEvent ( objectID(1) name("end") time(278.750992) showVert hideOnPrinter label(showDefault,"") fromLatestEnd toEarliestBegin  )
+BreakEvent ( objectID(16) name("break1") source("clk",10) label(showDefault,"") fromLatestEnd toEarliestBegin  )
+CycleBar ( name(bar) label(showDefault,"") fromLatestEnd toEarliestBegin cycleColor(3) cycleLineStyle(0) showVert showVertAttach showHash lineHoriz  )
+BoundaryEvent ( objectID(12) time(0.000000) cycleBar("bar") showVert label(showDefault,"") fromLatestEnd toEarliestBegin  )
+BoundaryEvent ( objectID(13) source("sig1",1) cycleBar("bar") showVert label(showDefault,"") fromLatestEnd toEarliestBegin  )
+BoundaryEvent ( objectID(14) source("sig1",2) cycleBar("bar") showVert label(showDefault,"") fromLatestEnd toEarliestBegin  )
+Constraint ( name("45") value("[,,]") 
+	instance(objectID(6) source("clk",8) target("clk",12) MarginValue("[,,]") label(showDefault,"") fromLatestEnd toEarliestBegin bottom  ))
+Constraint ( name("33") value("[,,]") 
+	instance(objectID(7) source("sig2",1) target("sig2",3) MarginValue("[,,]") label(showDefault,"") fromLatestEnd toEarliestBegin bottom  ))
+Measure ( value("[40,,40]") 
+	instance(objectID(8) source("clk",4) target("clk",8) MeasureValue("[40,,40]") label(showDefault,"") fromLatestEnd toEarliestBegin bottom  ))
+Measure ( value("[43,,43]") 
+	instance(objectID(9) source("sig2",1) target("sig2",3) MeasureValue("[43,,43]") label(showDefault,"") fromLatestEnd toEarliestBegin bottom  ))
+Measure ( value("[20,,20]") 
+	instance(objectID(10) source("sig1",3) target("sig1",4) MeasureValue("[20,,20]") label(showDefault,"") fromLatestEnd toEarliestBegin bottom  ))
+StoreImage ( name("sample1") value("[,,]") StoreEvent ( objectID(15) name("sample1") source("sig1",2) targetWave("sig1") label(showDefault,"") fromLatestEnd toEarliestBegin  )
+)

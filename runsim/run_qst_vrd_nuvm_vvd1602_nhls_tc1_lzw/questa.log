@@ -1,10 +1,10 @@
-# vsim -L /home/logic/verification/library/vivado2016_02/secureip -L /home/logic/verification/library/vivado2016_02/simprims_ver -L /home/logic/verification/library/vivado2016_02/unifast_ver -L /home/logic/verification/library/vivado2016_02/unimacro_ver -L /home/logic/verification/library/vivado2016_02/unisims_ver -vopt -c -pli "/media/cqiu/Document/work/prj/AIPrj/sim/sim_fxx/vf/novas/libpli.so" -sva -assertdebug -coverage -printsimstats -do "run -all ;coverage report -detail -cvg -directive -comments -file qst_vrd_nuvm_vvd1602_nhls_tc1_lzw.txt -r /;coverage save qst_vrd_nuvm_vvd1602_nhls_tc1_lzw.ucdb;q" -l questa.log -f questa.tops 
-# Start time: 11:07:26 on Jan 28,2019
+# vsim -L /home/logic/verification/library/vivado2016_02/secureip -L /home/logic/verification/library/vivado2016_02/simprims_ver -L /home/logic/verification/library/vivado2016_02/unifast_ver -L /home/logic/verification/library/vivado2016_02/unimacro_ver -L /home/logic/verification/library/vivado2016_02/unisims_ver -vopt -c -pli "/home/cqiu/AIPrj/sim/sim_fxx/vf/novas/libpli.so" -sva -assertdebug -coverage -printsimstats -do "run -all ;coverage report -detail -cvg -directive -comments -file qst_vrd_nuvm_vvd1602_nhls_tc1_lzw.txt -r /;coverage save qst_vrd_nuvm_vvd1602_nhls_tc1_lzw.ucdb;q" -l questa.log -f questa.tops 
+# Start time: 04:48:33 on Jan 29,2019
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
-# ** Warning: /media/cqiu/Document/work/prj/AIPrj/sim/sim_fxx/rtl/lzw_backward_dictionary_consult.v(85): (vopt-2685) [TFMPC] - Too few port connections for 'fifo_8k_14bit_inst'.  Expected 11, found 9.
-# ** Warning: /media/cqiu/Document/work/prj/AIPrj/sim/sim_fxx/rtl/lzw_backward_dictionary_consult.v(85): (vopt-2718) [TFMPC] - Missing connection for port 'almost_empty'.
-# ** Warning: /media/cqiu/Document/work/prj/AIPrj/sim/sim_fxx/rtl/lzw_backward_dictionary_consult.v(85): (vopt-2718) [TFMPC] - Missing connection for port 'almost_full'.
+# ** Warning: /home/cqiu/AIPrj/sim/sim_fxx/rtl/lzw_backward_dictionary_consult.v(85): (vopt-2685) [TFMPC] - Too few port connections for 'fifo_8k_14bit_inst'.  Expected 11, found 9.
+# ** Warning: /home/cqiu/AIPrj/sim/sim_fxx/rtl/lzw_backward_dictionary_consult.v(85): (vopt-2718) [TFMPC] - Missing connection for port 'almost_empty'.
+# ** Warning: /home/cqiu/AIPrj/sim/sim_fxx/rtl/lzw_backward_dictionary_consult.v(85): (vopt-2718) [TFMPC] - Missing connection for port 'almost_full'.
 # //  Questa Sim-64
 # //  Version 10.4c linux_x86_64 Jul 19 2015
 # //
@@ -208,7 +208,7 @@
 # Loading work.fifo_1k_5bit_blk_mem_gen_generic_cstr(fast)
 # Loading work.fifo_1k_5bit_blk_mem_gen_prim_width(fast)
 # Loading work.fifo_1k_5bit_blk_mem_gen_prim_wrapper(fast)
-# Loading /media/cqiu/Document/work/prj/AIPrj/sim/sim_fxx/vf/novas/libpli.so
+# Loading /home/cqiu/AIPrj/sim/sim_fxx/vf/novas/libpli.so
 # *Novas* Loading libsscore_mti10.1.so
 # *Verdi3* : Enable Parallel Dumping.
 # 
@@ -231,6 +231,10 @@
 # *Verdi3* : Create FSDB file 'tb_dut_top.fsdb'
 # *Verdi3* : Begin traversing the scopes, layer (0).
 # *Verdi3* : End of traversing.
+# *Verdi3* : Dumping the MDA (tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.S_doutb_2).
+# *Verdi3* : Dumping the MDA (tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.S_doutb_1).
+# *Verdi3* : Dumping the MDA (tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.S_rd_data).
+# *Verdi3* : Dumping the MDA (tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.S_dictionary_match_code).
 # *Verdi3* : Begin traversing the SVA assertions, layer (0).
 # *Verdi3* : End of traversing the SVA assertions.
 # Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[7].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 654.000 ns.
@@ -269,24 +273,24 @@
 # A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
 # Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[7].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 7534.000 ns.
 # A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
-# ** Note: $finish    : /media/cqiu/Document/work/prj/AIPrj/sim/sim_fxx/tb/btc/qst_vrd_nuvm_vvd1602_nhls_tc1_lzw/tb_lzw_top.v(33)
+# ** Note: $finish    : /home/cqiu/AIPrj/sim/sim_fxx/tb/btc/qst_vrd_nuvm_vvd1602_nhls_tc1_lzw/tb_lzw_top.v(33)
 #    Time: 11756 ns  Iteration: 1  Instance: /tb_lzw_top
 # Memory Statistics                         
-#     mem: size of vopt process (VSZ)            992.63 Mb
-#     mem: size after elab (VSZ)                 411.67 Mb
-#     mem: size during sim (VSZ)                 551.50 Mb
+#     mem: size of vopt process (VSZ)            992.68 Mb
+#     mem: size after elab (VSZ)                 411.64 Mb
+#     mem: size during sim (VSZ)                 551.48 Mb
 # Vopt Time                                 
-#    vopt: wall time                               2.42 s
-#    vopt: cpu time                                1.92 s
+#    vopt: wall time                               2.64 s
+#    vopt: cpu time                                3.23 s
 # Elaboration Time                          
-#    elab: wall time                               1.89 s
-#    elab: cpu time                                0.76 s
+#    elab: wall time                               2.27 s
+#    elab: cpu time                                1.03 s
 # Simulation Time                           
-#     sim: wall time                               2.25 s
-#     sim: cpu time                                1.41 s
+#     sim: wall time                               4.87 s
+#     sim: cpu time                                2.06 s
 # Total Time                                
-#   total: wall time                               6.56 s
-#   total: cpu time                                4.09 s
+#   total: wall time                               9.78 s
+#   total: cpu time                                6.32 s
 # 
-# End time: 11:07:32 on Jan 28,2019, Elapsed time: 0:00:06
+# End time: 04:48:43 on Jan 29,2019, Elapsed time: 0:00:10
 # Errors: 0, Warnings: 4

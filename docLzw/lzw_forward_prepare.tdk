@@ -2,15 +2,15 @@ Header (
 	company("Forte Design Systems") 
 	product("TimingDesigner-Professional") 
 	rev("6.002") 
-	file("e:\\work\\prj\\aiprj\\sim\\sim_fxx\\doclzw\\lzw_forward_prepare.td") 
-	date("01/28/2019") time("17:51") 
+	file("e:\\aiprj\\sim\\sim_fxx\\doclzw\\lzw_forward_prepare.td") 
+	date("01/29/2019") time(" 5:19") 
 	format("5.0") 
 	baseScale(1000.000000) 
 	zoomFactor("0.001") 
 	grayHidden 
 	simHDL(Verilog) 
 	simDelayMechanism(Transport) 
-	nextID(22) 
+	nextID(24) 
 	TimingAnalysisMethod(51) 
 	user(date,"") user(description,"") user(designer,"") user(revision,"1.0") 
 	generalPrintParams( "printer,,,portrait,clipboard,letter,default,6,5,in,color,scaleable,mifframe,preview,")
@@ -63,7 +63,8 @@ DiagramStyle (
 	showSlopedEdges 
 	showUncertainties 
 	)
-Clock ( objectID(2) name("I_sys_clk") periodScale(1000.000) period(10.000000) dutyCycle(50.000000) 
+Clock ( objectID(2) name("I_sys_clk") periodScale(1000.000) period(10.000000) dutyCycle(50.000000) removeCommonUncertaintyLike edges(
+	(28,label(showBlank,"","") ))
 	hdl( direction(internal) ) label(showDefault,"","") )
 Waveform ( objectID(3) name("I_gmii_txen") minheight("0") edges(
 	(low,0.000,0.000,L), 
@@ -86,14 +87,21 @@ Waveform ( objectID(4) name("I_gmii_txd[7:0]") minheight("0") edges(
 Waveform ( objectID(12) name("S_fifo_head_wr") minheight("0") edges(
 	(low,0.000,0.000,L), 
 	(high,102000.000,102000.000), 
-	(low,143000.000,143000.000), 
+	(low,140000.000,140000.000), 
 	(high,297000.000,297000.000), 
 	(blank,299117.000,299117.000)) 
 	hdl( direction(internal) ) label(showDefault,"","") )
-Waveform ( objectID(18) name("S_fifo_head_wr_1d") minheight("0") edges(
+Waveform ( objectID(22) name("S_fifo_head_wr_1d") minheight("0") edges(
 	(low,0.000,0.000,L), 
 	(high,110000.000,110000.000), 
-	(low,152000.000,152000.000), 
+	(low,149000.000,149000.000), 
+	(high,301000.000,301000.000), 
+	(blank,303117.000,303117.000)) 
+	hdl( direction(internal) ) label(showDefault,"","") )
+Waveform ( objectID(18) name("S_fifo_head_wr_2d") minheight("0") edges(
+	(low,0.000,0.000,L), 
+	(high,121000.000,121000.000), 
+	(low,160000.000,160000.000), 
 	(high,301000.000,301000.000), 
 	(blank,303117.000,303117.000)) 
 	hdl( direction(internal) ) label(showDefault,"","") )
@@ -101,13 +109,13 @@ Waveform ( objectID(13) name("S_fifo_head_wdata[8:0]") minheight("0") edges(
 	(valid,0.000,0.000,L), 
 	(z,5000.000,5000.000), 
 	(valid,102000.000,102000.000,label(showText,"VData","") ), 
-	(valid,145000.000,145000.000,label(showText,"0ff","") ), 
-	(invalid,155000.000,155000.000), 
+	(valid,140000.000,140000.000,label(showText,"0ff","") ), 
+	(invalid,161000.000,161000.000), 
 	(blank,266116.962,266116.962)) 
 	hdl( direction(internal) ) label(showDefault,"","") )
 Waveform ( objectID(14) name("O_pload_txen") minheight("0") edges(
 	(low,0.000,0.000,L), 
-	(high,145000.000,145000.000), 
+	(high,141000.000,141000.000), 
 	(low,179000.000,179000.000), 
 	(valid,298000.000,298000.000), 
 	(blank,300117.000,300117.000)) 
@@ -115,14 +123,14 @@ Waveform ( objectID(14) name("O_pload_txen") minheight("0") edges(
 Waveform ( objectID(15) name("O_pload_txd[7:0]") minheight("0") edges(
 	(valid,0.000,0.000,L), 
 	(z,4000.000,4000.000), 
-	(valid,144000.000,144000.000), 
+	(valid,140000.000,140000.000), 
 	(z,180000.000,180000.000), 
 	(valid,299000.000,299000.000), 
 	(blank,301117.000,301117.000)) 
 	hdl( direction(internal) ) label(showDefault,"","") )
 Waveform ( objectID(19) name("S_fifo_pload_wr") minheight("0") edges(
 	(low,0.000,0.000,L), 
-	(high,144000.000,144000.000), 
+	(high,141000.000,141000.000), 
 	(low,182000.000,182000.000), 
 	(high,297000.000,297000.000), 
 	(blank,299117.000,299117.000)) 
@@ -130,16 +138,23 @@ Waveform ( objectID(19) name("S_fifo_pload_wr") minheight("0") edges(
 Waveform ( objectID(20) name("S_fifo_pload_wr_1d") minheight("0") edges(
 	(low,0.000,0.000,L), 
 	(high,151000.000,151000.000), 
-	(low,193000.000,193000.000), 
+	(low,190000.000,190000.000), 
+	(high,301000.000,301000.000), 
+	(blank,303117.000,303117.000)) 
+	hdl( direction(internal) ) label(showDefault,"","") )
+Waveform ( objectID(23) name("S_fifo_pload_wr_2d") minheight("0") edges(
+	(low,0.000,0.000,L), 
+	(high,160000.000,160000.000), 
+	(low,199000.000,199000.000), 
 	(high,301000.000,301000.000), 
 	(blank,303117.000,303117.000)) 
 	hdl( direction(internal) ) label(showDefault,"","") )
 Waveform ( objectID(21) name("S_fifo_pload_wdata[8:0]") minheight("0") edges(
 	(valid,0.000,0.000,L), 
 	(z,5000.000,5000.000), 
-	(valid,144000.000,144000.000,label(showText,"VData","") ), 
+	(valid,140000.000,140000.000,label(showText,"VData","") ), 
 	(valid,181000.000,181000.000,label(showText,"0ff","") ), 
-	(invalid,194000.000,194000.000), 
+	(invalid,199000.000,199000.000), 
 	(blank,266117.000,266117.000)) 
 	hdl( direction(internal) ) label(showDefault,"","") )
 Waveform ( objectID(16) name("O_fifo_pload_req") minheight("0") edges(
