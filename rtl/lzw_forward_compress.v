@@ -73,50 +73,13 @@ wire        [13:0] S_dictionary_match_code  ;
 // output code |              a(1)     b(2)              ab(4)    c(3)             ba(5)     b(2)    c(3)    
 //--------------------------------------------------------------------------------------------------------
 
+assign S_wr_data               = {1'b1,S_prefix_code_d1[13:0],S_dictionary_code[13:0]};
 assign S_rd_addr               = {S_prefix_code[1:0],S_tx_data[7:0]}                  ;
 assign O_compress_data         = S_compress_data                                      ;
 assign O_compress_data_en      = S_compress_data_en                                   ;
 assign O_rx_dictionary_addr    = S_dictionary_code                                    ;
 assign O_rx_dictionary_data    = S_rx_dictionary_data                                 ;
 assign O_rx_dictionary_data_en = S_rx_dictionary_data_en                              ;
-
-assign S_wr_data               = {1'b1,S_prefix_code_d1[13:0],S_dictionary_code[13:0]};
-
-always @(posedge I_sys_clk)
-begin
-    if(I_sys_rst)
-    begin
-        S_wr_addr <= 10'h0;
-    end
-    else if(S_update_cycle)
-    begin
-        S_wr_addr <= {S_prefix_code[1:0],S_tx_data[7:0]};
-    end
-end
-
-always @(posedge I_sys_clk)
-begin
-    if(I_sys_rst)
-    begin
-        S_wr_en <= 16'h0;
-    end
-    else if(S_compare_cycle && (S_dictionary_match == 16'h0) && (~I_dictionary_lock))
-    begin
-        if(S_dictionary_valid !== 16'hffff)
-        begin
-            S_wr_en <= S_dictionary_valid + 16'h1;
-        end
-        else
-        begin
-            S_wr_en <= {S_dictionary_sn,1'b0};
-        end
-    end
-    else 
-    begin
-        S_wr_en <= 16'h0;
-    end
-end
-
 
 
 always@(posedge I_sys_clk)
@@ -221,7 +184,41 @@ begin
 end
 
 
+always @(posedge I_sys_clk)
+begin
+    if(I_sys_rst)
+    begin
+        S_wr_en <= 16'h0;
+    end
+    else if(S_compare_cycle && (S_dictionary_match == 16'h0) && (~I_dictionary_lock))
+    begin
+        if(S_dictionary_valid !== 16'hffff)
+        begin
+            S_wr_en <= S_dictionary_valid + 16'h1;
+        end
+        else
+        begin
+            S_wr_en <= {S_dictionary_sn,1'b0};
+        end
+    end
+    else 
+    begin
+        S_wr_en <= 16'h0;
+    end
+end
 
+
+always @(posedge I_sys_clk)
+begin
+    if(I_sys_rst)
+    begin
+        S_wr_addr <= 10'h0;
+    end
+    else if(S_update_cycle)
+    begin
+        S_wr_addr <= {S_prefix_code[1:0],S_tx_data[7:0]};
+    end
+end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                       //

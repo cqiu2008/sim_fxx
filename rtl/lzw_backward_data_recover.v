@@ -39,7 +39,7 @@ wire               S_fifo_full                   ;
 wire               S_fifo_empty                  ;
 wire               S_fifo_almost_empty           ;
 wire        [12:0] S_fifo_data_count             ;
-reg                S_fifo_rd_valid               ;
+reg                S_fifo_rd_req                 ;
 
 wire        [13:0] S_dictionary_addr             ;
 wire               S_dictionary_recv_valid       ;
@@ -49,6 +49,7 @@ reg         [13:0] S_dictionary_recv_code_buf    ;
 reg                S_bottom_flag                 ;
 reg                S_bottom_flag_d1              ;
 reg                S_clk_div2                    ;
+reg                S_data_valid_flag             ;
 reg                S_dictionary_recv_data_en     ;
 wire               S_reverse_byte_flag           ;
 reg         [ 4:0] S_reverse_byte_num            ;
@@ -115,15 +116,15 @@ always @(posedge I_sys_clk)
 begin
     if(I_sys_rst)
     begin
-        S_fifo_rd_valid <= 1'b0;
+        S_fifo_rd_req <= 1'b0;
     end
     else if(S_fifo_data_count > 13'hf)
     begin
-        S_fifo_rd_valid <= 1'b1;
+        S_fifo_rd_req <= 1'b1;
     end
-    else if(S_fifo_almost_empty)
+    else if(S_fifo_empty)
     begin
-        S_fifo_rd_valid <= 1'b0;
+        S_fifo_rd_req <= 1'b0;
     end
 end
 
@@ -133,7 +134,7 @@ begin
     begin
         S_fifo_rden <= 1'b0;
     end
-    else if(S_clk_div2 && S_fifo_rd_valid && (S_dictionary_addr[13:8] == 6'h0))
+    else if(S_clk_div2 && S_fifo_rd_req && (S_dictionary_addr[13:8] == 6'h0))
     begin
         S_fifo_rden <= 1'b1;
     end
@@ -175,7 +176,19 @@ begin
     end
 end
 
-assign S_dictionary_addr = S_bottom_flag ? S_fifo_dout : S_dictionary_recv_code_buf; 
+always @(posedge I_sys_clk)
+begin
+    if(I_sys_rst)
+    begin
+        S_data_valid_flag <= 1'b0;
+    end
+    else if(~S_clk_div2)
+    begin
+        S_data_valid_flag <= S_fifo_rden;
+    end
+end
+
+assign S_dictionary_addr = S_bottom_flag ? (S_data_valid_flag ? S_fifo_dout : 14'h0) : S_dictionary_recv_code_buf; 
 
 always @(posedge I_sys_clk)
 begin
