@@ -3,8 +3,8 @@ module lzw_forward_prepare(
 input              I_sys_clk                , ///system clock,250m clock                         ///
 input              I_sys_rst                , ///system reset,sync with 250m                     ///
 
-input       [ 7:0] I_tx_gmii_data           , 
-input              I_tx_gmii_data_en        , 
+input       [ 7:0] I_gmii_txd               , 
+input              I_gmii_txen              , 
 
 output             O_head_no_pload          ,
 output             O_fifo_head_req          ,

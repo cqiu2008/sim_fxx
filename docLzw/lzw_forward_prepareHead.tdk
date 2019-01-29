@@ -1,0 +1,167 @@
+Header (
+	company("EMA Design Automation") 
+	product("TimingDesigner") 
+	rev("9.2") 
+	file("e:/work/prj/aiprj/sim/sim_fxx/doclzw/lzw_forward_preparehead.td") 
+	date("01/29/2019") time("14:14") 
+	format("9.0") 
+	baseScale(1000.000000) 
+	zoomFactor("0.000796292") 
+	zoomBegin(0) 
+	zoomEnd(421044) 
+	nameFrameWidth(206) 
+	simHDL(Verilog) 
+	simDelayMechanism(Transport) 
+	nextID(39) 
+	TimingAnalysisMethod(51) 
+	SDCVersion(0) 
+	
+	generalPrintParams( "printer,,,portrait,clipboard,Letter,default,6,5,in,color,scaleable,mifframe,preview,")
+	diagramPrintParams( "0,2147483647,0,-1,true,true,1,1,true,true,true,true,all,diagramEnd")
+	spreadsheetPrintParams( "0,2147483647,true,false,1,true,all")
+	)
+tclPreferences (UseAboveSixtyFiveNm UseAlteraFastTimingModel 
+	UseActelMaxTimingModel UseTimingPath UseArrivalTime )
+HDLHeader( 
+	hdlFile("") 
+	checkConstraints(true) 
+	comment("") 
+	checkTimeout(never) 
+	
+	command( name("lzw_forward_preparehead") cmdType(null) ))
+DefaultLabel(
+	delay(showNameString,"") 
+	constraint(showNameString,"") 
+	guarantee(showNameString,"") 
+	measure(showMeasure,"") 
+	store(showNameString,"") 
+	wait(showNameString,"") 
+	end(showNameString,"") 
+	boundary(showIncrement,"") 
+	loop(showNameString,"") 
+	waveform(showSkip,"","") 
+	specifiedclock(showSkip,"","") 
+	derivedclock(showSkip,"","") 
+	simwaveform(showSkip,"","") 
+	bus(showValue,"","H") 
+	)
+DiagramStyle (
+	waveformFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	rulerFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	relationshipFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	labelFont(winFont("Arial",90) qtFont("Arial",9) ) 
+	annotationFont(winFont("Arial",80) qtFont("Arial",8) ) 
+	slotHeight("11") 
+	edgeHeight("11") 
+	edgeGrade("1.96261") 
+	inputPenStyle(0) 
+	outputPenStyle(0) 
+	inoutPenStyle(0) 
+	internalPenStyle(0) 
+	vRelationshipPenStyle(0) 
+	hRelationshipPenStyle(0) 
+	inputPenColor(3) 
+	outputPenColor(3) 
+	inoutPenColor(3) 
+	internalPenColor(3) 
+	wavePenWidth("0") 
+	relationshipPenWidth("0") 
+	wavesOnTop 
+	relationshipsOnTop 
+	annotationsOnTop 
+	showSlopedEdges 
+	edgeDisplayType(Uncertainty) 
+	)
+Clock ( objectID(2) name("clk") minheight("0") periodScale(1000.000) period(10.000000) dutyCycle(50.000000) 
+	hdl( direction(input) ) square label(showText,"","H") )
+Waveform ( objectID(3) name("I_gmii_txen") minheight("0") edges(
+	(low,0.000,0.000,L), 
+	(high,40000.000,40000.000), 
+	(low,131000.000,131000.000), 
+	(high,340000.000,340000.000), 
+	(blank,342142.000,342142.000)) 
+	hdl( direction(internal) ) label(showDefault,"","H") )
+Bus ( objectID(4) name("I_gmii_txd[7:0]") minheight("0") edges(
+	(invalid,0.000,0.000,L), 
+	(valid,40000.000,40000.000,label(showValue,"","preamble") ), 
+	(valid,80000.000,80000.000,label(showDefault,"","sfd") ), 
+	(valid,91000.000,91000.000,label(showDefault,"","head") ), 
+	(invalid,130000.000,130000.000), 
+	(valid,339000.000,339000.000), 
+	(blank,341142.000,341142.000)) 
+	hdl( direction(input) ) label(showDefault,"","H") )
+Waveform ( objectID(16) name("S_fifo_head_en") minheight("0") edges(
+	(low,0.000,0.000,L), 
+	(high,104000.000,104000.000), 
+	(low,140000.000,140000.000), 
+	(high,339000.000,339000.000), 
+	(blank,341142.000,341142.000)) 
+	hdl( direction(internal) ) label(showDefault,"","H") )
+Waveform ( objectID(17) name("S_fifo_head_en_1d") minheight("0") edges(
+	(low,0.000,0.000,L), 
+	(high,111000.000,111000.000), 
+	(low,150000.000,150000.000), 
+	(high,339000.000,339000.000), 
+	(blank,341142.000,341142.000)) 
+	hdl( direction(internal) ) label(showDefault,"","H") )
+Waveform ( objectID(18) name("S_fifo_head_en_2d") minheight("0") edges(
+	(low,0.000,0.000,L), 
+	(high,120000.000,120000.000), 
+	(low,160000.000,160000.000), 
+	(high,339000.000,339000.000), 
+	(blank,341142.000,341142.000)) 
+	hdl( direction(internal) ) label(showDefault,"","H") )
+Waveform ( objectID(19) name("S_fifo_head_wr") minheight("0") edges(
+	(low,0.000,0.000,L), 
+	(high,104000.000,104000.000), 
+	(low,163000.000,163000.000), 
+	(high,339000.000,339000.000), 
+	(blank,341150.000,341150.000)) 
+	hdl( direction(internal) ) label(showDefault,"","H") )
+Bus ( objectID(13) name("S_fifo_head_wdata[8:0]") minheight("0") edges(
+	(invalid,0.000,0.000,L), 
+	(valid,102000.000,102000.000,label(showDefault,"","head") ), 
+	(valid,141000.000,141000.000,label(showDefault,"","0xff") ), 
+	(invalid,160000.000,160000.000), 
+	(blank,341142.000,341142.000)) 
+	hdl( direction(internal) ) label(showDefault,"","H") )
+Waveform ( objectID(20) name("O_head_no_pload") minheight("0") edges(
+	(low,0.000,0.000,L), 
+	(high,161000.000,161000.000), 
+	(low,260000.000,260000.000), 
+	(blank,324658.525,324658.525)) 
+	hdl( direction(output) ) label(showDefault,"","H") )
+Waveform ( objectID(21) name("O_fifo_head_req") minheight("0") edges(
+	(low,0.000,0.000,L), 
+	(high,161000.000,161000.000), 
+	(low,262000.000,262000.000), 
+	(low,341000.000,341000.000), 
+	(blank,343150.000,343150.000)) 
+	hdl( direction(internal) ) label(showDefault,"","H") )
+Waveform ( objectID(22) name("I_fifo_head_ack") minheight("0") edges(
+	(low,0.000,0.000,L), 
+	(high,249000.000,249000.000), 
+	(low,260000.000,260000.000), 
+	(high,346000.000,346000.000), 
+	(blank,348150.000,348150.000)) 
+	hdl( direction(input) ) label(showDefault,"","H") )
+Waveform ( objectID(23) name("I_fifo_head_rd") minheight("0") edges(
+	(low,0.000,0.000,L), 
+	(high,251000.000,251000.000), 
+	(low,310000.000,310000.000), 
+	(high,350000.000,350000.000), 
+	(blank,352150.000,352150.000)) 
+	hdl( direction(input) ) label(showDefault,"","H") )
+Bus ( objectID(24) name("O_fifo_head_rdata[8:0]") minheight("0") edges(
+	(invalid,0.000,0.000,L), 
+	(valid,262000.000,262000.000,label(showDefault,"","head") ), 
+	(valid,300000.000,300000.000,label(showDefault,"","0xff") ), 
+	(invalid,320000.000,320000.000), 
+	(blank,351000.000,351000.000)) 
+	hdl( direction(internal) ) label(showDefault,"","H") )
+Grid ( "clk" topWave("clk") 
+	 color(5) 1stWidth(0) 2ndWidth(0) 1stStyle(1) 2ndStyle(0) 
+  show1st )
+EndCycleEvent ( objectID(1) name("end") time(357.938608) showVert hideOnPrinter label(showDefault,"") fromLatestEnd toEarliestBegin  )
+Constraint ( name("<=72B") value("[,,]") 
+	instance(objectID(38) source("I_gmii_txd[7:0]",4) target("I_gmii_txd[7:0]",3) MarginValue("[,,]") label(showDefault,"") fromLatestEnd toEarliestBegin bottom  ))

@@ -1,3 +1,0 @@
-Command Line: /opt/tool/novas/verdi3_201403/platform/LINUXAMD64/bin/Novas -rcFile /home/cqiu/AIPrj/sim/sim_fxx/vf/novas/novas.rc -f /home/cqiu/AIPrj/sim/sim_fxx/runsim/run_qst_vrd_nuvm_vvd1602_nhls_tc1_lzw/flist.f -sswr /home/cqiu/AIPrj/sim/sim_fxx/tb/btc/qst_vrd_nuvm_vvd1602_nhls_tc1_lzw/rc/cm.rc -ssf /home/cqiu/AIPrj/sim/sim_fxx/runsim/run_qst_vrd_nuvm_vvd1602_nhls_tc1_lzw/tb_dut_top.fsdb
-uname(Linux cqiuE40 4.8.0-36-generic #36~16.04.1-Ubuntu SMP Sun Feb 5 09:39:57 UTC 2017 x86_64)
-au time 37.248328 6.168000 1.768000 delta 85688272 122617808 total 90538952 127468488
