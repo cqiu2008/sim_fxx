@@ -1,0 +1,303 @@
+# vsim -L /home/logic/verification/library/vivado2016_02/secureip -L /home/logic/verification/library/vivado2016_02/simprims_ver -L /home/logic/verification/library/vivado2016_02/unifast_ver -L /home/logic/verification/library/vivado2016_02/unimacro_ver -L /home/logic/verification/library/vivado2016_02/unisims_ver -vopt -c -pli "/home/cqiu/AIPrj/sim/sim_fxx/vf/novas/libpli.so" -sva -assertdebug -coverage -printsimstats -do "run -all ;coverage report -detail -cvg -directive -comments -file qst_vrd_nuvm_vvd1602_nhls_tc1_lzw.txt -r /;coverage save qst_vrd_nuvm_vvd1602_nhls_tc1_lzw.ucdb;q" -l questa.log -f questa.tops 
+# Start time: 23:39:58 on Feb 17,2019
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3865) Due to PLI being present, full design access is being specified.
+# ** Warning: /home/cqiu/AIPrj/sim/sim_fxx/rtl/lzw_backward_byte_reverse.v(303): (vopt-2685) [TFMPC] - Too few port connections for 'blk_mem_1k_8bit_inst'.  Expected 16, found 14.
+# ** Warning: /home/cqiu/AIPrj/sim/sim_fxx/rtl/lzw_backward_byte_reverse.v(303): (vopt-2718) [TFMPC] - Missing connection for port 'rstb_busy'.
+# ** Warning: /home/cqiu/AIPrj/sim/sim_fxx/rtl/lzw_backward_byte_reverse.v(303): (vopt-2718) [TFMPC] - Missing connection for port 'rsta_busy'.
+# //  Questa Sim-64
+# //  Version 10.4c linux_x86_64 Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading sv_std.std
+# Loading work.glbl(fast)
+# Loading work.lzw_backward_dictionary_consult(fast)
+# Loading work.fifo_8k_14bit(fast)
+# Loading work.fifo_8k_14bit_fifo_generator_v13_2_0(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.GND(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.VCC(fast)
+# Loading work.fifo_8k_14bit_fifo_generator_v13_2_0_synth(fast)
+# Loading work.fifo_8k_14bit_fifo_generator_top(fast)
+# Loading work.fifo_8k_14bit_fifo_generator_ramfifo(fast)
+# Loading work.fifo_8k_14bit_rd_logic(fast)
+# Loading work.fifo_8k_14bit_dc_ss(fast)
+# Loading work.fifo_8k_14bit_updn_cntr(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.FDRE(fast)
+# Loading work.fifo_8k_14bit_rd_status_flags_ss(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT3(fast__4)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT4(fast)
+# Loading work.fifo_8k_14bit_compare_2(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.CARRY4(fast)
+# Loading work.fifo_8k_14bit_compare_3(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT6(fast__2)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT3(fast__5)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT4(fast__1)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT2(fast)
+# Loading work.fifo_8k_14bit_compare_4(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT6(fast__3)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.FDSE(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT2(fast__1)
+# Loading work.fifo_8k_14bit_rd_bin_cntr(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT4(fast__2)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT1(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT2(fast__2)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT5(fast)
+# Loading work.fifo_8k_14bit_wr_logic(fast)
+# Loading work.fifo_8k_14bit_wr_status_flags_ss(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT3(fast__6)
+# Loading work.fifo_8k_14bit_compare(fast)
+# Loading work.fifo_8k_14bit_compare_0(fast)
+# Loading work.fifo_8k_14bit_compare_1(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT6(fast__4)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT1(fast__1)
+# Loading work.fifo_8k_14bit_wr_bin_cntr(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT3(fast__7)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT4(fast__3)
+# Loading work.fifo_8k_14bit_memory(fast)
+# Loading work.fifo_8k_14bit_blk_mem_gen_v8_4_0(fast)
+# Loading work.fifo_8k_14bit_blk_mem_gen_v8_4_0_synth(fast)
+# Loading work.fifo_8k_14bit_blk_mem_gen_top(fast)
+# Loading work.fifo_8k_14bit_blk_mem_gen_generic_cstr(fast)
+# Loading work.fifo_8k_14bit_blk_mem_gen_mux__parameterized0(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT3(fast__2)
+# Loading work.fifo_8k_14bit_blk_mem_gen_prim_width(fast)
+# Loading work.fifo_8k_14bit_blk_mem_gen_prim_wrapper(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RAMB18E1(fast__1)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RB18_INTERNAL_VLOG(fast__1)
+# Loading work.fifo_8k_14bit_blk_mem_gen_prim_width__parameterized0(fast)
+# Loading work.fifo_8k_14bit_blk_mem_gen_prim_wrapper__parameterized0(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RAMB36E1(fast__6)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RB36_INTERNAL_VLOG(fast__3)
+# Loading work.fifo_8k_14bit_blk_mem_gen_prim_width__parameterized1(fast)
+# Loading work.fifo_8k_14bit_blk_mem_gen_prim_wrapper__parameterized1(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RAMB36E1(fast__7)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RB36_INTERNAL_VLOG(fast__4)
+# Loading work.fifo_8k_14bit_blk_mem_gen_prim_width__parameterized2(fast)
+# Loading work.fifo_8k_14bit_blk_mem_gen_prim_wrapper__parameterized2(fast)
+# Loading work.lzw_forward_frame(fast)
+# Loading work.lzw_forward_prepare(fast)
+# Loading work.tb_lzw_top(fast)
+# Loading work.sync_reset(fast)
+# Loading work.lzw_forward_compress(fast)
+# Loading work.lzw_forward_dictionary(fast)
+# Loading work.blk_mem_1024_29(fast)
+# Loading work.blk_mem_1024_29_blk_mem_gen_v8_4_0(fast)
+# Loading work.blk_mem_1024_29_blk_mem_gen_v8_4_0_synth(fast)
+# Loading work.blk_mem_1024_29_blk_mem_gen_top(fast)
+# Loading work.blk_mem_1024_29_blk_mem_gen_generic_cstr(fast)
+# Loading work.blk_mem_1024_29_blk_mem_gen_prim_width(fast)
+# Loading work.blk_mem_1024_29_blk_mem_gen_prim_wrapper_init(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RAMB36E1(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RB36_INTERNAL_VLOG(fast)
+# Loading work.lzw_backward_decompress(fast)
+# Loading work.lzw_backward_dictionary(fast)
+# Loading work.blk_mem_16k_23(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_v8_4_0(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_v8_4_0_synth(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_top(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_generic_cstr(fast)
+# Loading work.blk_mem_16k_23_bindec(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT3(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT3(fast__1)
+# Loading work.blk_mem_16k_23_bindec_0(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_mux(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT6(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT6(fast__1)
+# Loading work.blk_mem_16k_23_blk_mem_gen_mux__parameterized0(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_width(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_wrapper_init(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RAMB18E1(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RB18_INTERNAL_VLOG(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_width__parameterized9(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_wrapper_init__parameterized9(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RAMB36E1(fast__1)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RB36_INTERNAL_VLOG(fast__1)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_width__parameterized0(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_wrapper_init__parameterized0(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RAMB36E1(fast__2)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RB36_INTERNAL_VLOG(fast__2)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_width__parameterized1(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_wrapper_init__parameterized1(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RAMB36E1(fast__3)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_width__parameterized2(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_wrapper_init__parameterized2(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RAMB36E1(fast__4)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_width__parameterized3(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_wrapper_init__parameterized3(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_width__parameterized4(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_wrapper_init__parameterized4(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_width__parameterized5(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_wrapper_init__parameterized5(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT3(fast__3)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_width__parameterized6(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_wrapper_init__parameterized6(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RAMB36E1(fast__5)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_width__parameterized7(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_wrapper_init__parameterized7(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_width__parameterized8(fast)
+# Loading work.blk_mem_16k_23_blk_mem_gen_prim_wrapper_init__parameterized8(fast)
+# Loading work.lzw_backward_data_recover(fast)
+# Loading work.lzw_backward_byte_reverse(fast)
+# Loading work.fifo_1k_9bit(fast)
+# Loading work.fifo_1k_9bit_fifo_generator_v13_2_0(fast)
+# Loading work.fifo_1k_9bit_fifo_generator_v13_2_0_synth(fast)
+# Loading work.fifo_1k_9bit_fifo_generator_top(fast)
+# Loading work.fifo_1k_9bit_fifo_generator_ramfifo(fast)
+# Loading work.fifo_1k_9bit_rd_logic(fast)
+# Loading work.fifo_1k_9bit_dc_ss(fast)
+# Loading work.fifo_1k_9bit_updn_cntr(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT3(fast__8)
+# Loading work.fifo_1k_9bit_rd_status_flags_ss(fast)
+# Loading work.fifo_1k_9bit_compare_1(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT6(fast__5)
+# Loading work.fifo_1k_9bit_compare_2(fast)
+# Loading work.fifo_1k_9bit_rd_bin_cntr(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT2(fast__3)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT3(fast__9)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT4(fast__4)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT5(fast__1)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT6(fast__6)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT6(fast__7)
+# Loading work.fifo_1k_9bit_wr_logic(fast)
+# Loading work.fifo_1k_9bit_wr_status_flags_ss(fast)
+# Loading work.fifo_1k_9bit_compare(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT6(fast__8)
+# Loading work.fifo_1k_9bit_compare_0(fast)
+# Loading work.fifo_1k_9bit_wr_bin_cntr(fast)
+# Loading work.fifo_1k_9bit_memory(fast)
+# Loading work.fifo_1k_9bit_blk_mem_gen_v8_4_0(fast)
+# Loading work.fifo_1k_9bit_blk_mem_gen_v8_4_0_synth(fast)
+# Loading work.fifo_1k_9bit_blk_mem_gen_top(fast)
+# Loading work.fifo_1k_9bit_blk_mem_gen_generic_cstr(fast)
+# Loading work.fifo_1k_9bit_blk_mem_gen_prim_width(fast)
+# Loading work.fifo_1k_9bit_blk_mem_gen_prim_wrapper(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RAMB18E1(fast__2)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.RB18_INTERNAL_VLOG(fast__2)
+# Loading work.fifo_1k_5bit(fast)
+# Loading work.fifo_1k_5bit_fifo_generator_v13_2_0(fast)
+# Loading work.fifo_1k_5bit_fifo_generator_v13_2_0_synth(fast)
+# Loading work.fifo_1k_5bit_fifo_generator_top(fast)
+# Loading work.fifo_1k_5bit_fifo_generator_ramfifo(fast)
+# Loading work.fifo_1k_5bit_rd_logic(fast)
+# Loading work.fifo_1k_5bit_dc_ss(fast)
+# Loading work.fifo_1k_5bit_updn_cntr(fast)
+# Loading work.fifo_1k_5bit_rd_status_flags_ss(fast)
+# Loading work.fifo_1k_5bit_compare_1(fast)
+# Loading work.fifo_1k_5bit_compare_2(fast)
+# Loading work.fifo_1k_5bit_rd_bin_cntr(fast)
+# Loading work.fifo_1k_5bit_wr_logic(fast)
+# Loading work.fifo_1k_5bit_wr_status_flags_ss(fast)
+# Loading work.fifo_1k_5bit_compare(fast)
+# Loading work.fifo_1k_5bit_compare_0(fast)
+# Loading work.fifo_1k_5bit_wr_bin_cntr(fast)
+# Loading work.fifo_1k_5bit_memory(fast)
+# Loading work.fifo_1k_5bit_blk_mem_gen_v8_4_0(fast)
+# Loading work.fifo_1k_5bit_blk_mem_gen_v8_4_0_synth(fast)
+# Loading work.fifo_1k_5bit_blk_mem_gen_top(fast)
+# Loading work.fifo_1k_5bit_blk_mem_gen_generic_cstr(fast)
+# Loading work.fifo_1k_5bit_blk_mem_gen_prim_width(fast)
+# Loading work.fifo_1k_5bit_blk_mem_gen_prim_wrapper(fast)
+# Loading work.blk_mem_1k_8bit(fast)
+# Loading work.blk_mem_1k_8bit_blk_mem_gen_v8_4_0(fast)
+# Loading work.blk_mem_1k_8bit_blk_mem_gen_v8_4_0_synth(fast)
+# Loading work.blk_mem_1k_8bit_blk_mem_gen_top(fast)
+# Loading work.blk_mem_1k_8bit_blk_mem_gen_generic_cstr(fast)
+# Loading work.blk_mem_1k_8bit_blk_mem_gen_prim_width(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.SRL16E(fast)
+# Loading work.blk_mem_1k_8bit_blk_mem_gen_prim_wrapper(fast)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT2(fast__4)
+# Loading /home/logic/verification/library/vivado2016_02/simprims_ver.LUT4(fast__5)
+# ** Warning: (vsim-3015) /home/cqiu/AIPrj/sim/sim_fxx/rtl/lzw_backward_byte_reverse.v(303): [PCDPC] - Port size (8) does not match connection size (23) for port 'dinb'. The port definition is at: /home/cqiu/AIPrj/sim/sim_fxx/rtl/ipsim/blk_mem_1k_8bit_sim_netlist.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_lzw_top/lzw_backward_decompress_inst/lzw_backward_byte_reverse_inst/blk_mem_1k_8bit_inst File: /home/cqiu/AIPrj/sim/sim_fxx/rtl/ipsim/blk_mem_1k_8bit_sim_netlist.v
+# Loading /home/cqiu/AIPrj/sim/sim_fxx/vf/novas/libpli.so
+# *Novas* Loading libsscore_mti10.1.so
+# *Verdi3* : Enable Parallel Dumping.
+# 
+#  $helloworld PLI application is being loaded.
+# 
+# run -all 
+# 
+#  Hello!! Thanks for your called,
+# 
+#  and wish you happy every day!!! 
+# 
+# FSDB Dumper for ModelSim, Release Verdi3_I-2014.03-SP2, Linux x86_64/64bit, 08/07/2014
+# (C) 1996 - 2014 by Synopsys, Inc.
+# ***********************************************************************
+# *  WARNING -                                                          *
+# *  The simulator version is newer than the FSDB dumper version which  *
+# *  may cause abnormal behavior, please contact Synopsys support for   *
+# *  assistance.                                                        *
+# ***********************************************************************
+# *Verdi3* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+# *Verdi3* : Create FSDB file 'tb_dut_top.fsdb'
+# *Verdi3* : Begin traversing the scopes, layer (0).
+# *Verdi3* : End of traversing.
+# *Verdi3* : Dumping the MDA (tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.S_doutb_2).
+# *Verdi3* : Dumping the MDA (tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.S_doutb_1).
+# *Verdi3* : Dumping the MDA (tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.S_rd_data).
+# *Verdi3* : Dumping the MDA (tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.S_dictionary_match_code).
+# *Verdi3* : Begin traversing the SVA assertions, layer (0).
+# *Verdi3* : End of traversing the SVA assertions.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[7].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 654.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[10].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 726.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[14].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 1062.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[11].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 1966.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[3].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 2742.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[13].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 4014.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[7].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 5254.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[8].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 5262.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[9].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 5278.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[15].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 6102.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[7].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 7374.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[9].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 7750.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[10].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 7766.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[13].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 8174.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# Memory Collision Error on RAMB36E1 : tb_lzw_top.lzw_forward_compress_inst.lzw_forward_dictionary_inst.small_dictionary[1].blk_mem_1024_29_inst.U0.inst_blk_mem_gen.\gnbram.gnativebmg.native_blk_mem_gen .\valid.cstr .\ramloop[0].ram.r .\prim_init.ram .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram .genblk1.INT_RAMB_TDP.chk_for_col_msg at simulation time 8598.000 ns.
+# A read was performed on address 819f (hex) of port B while a write was requested to the same address on port A.  The write will be successful however the read value on port B is unknown until the next CLKB cycle.
+# ** Note: $finish    : /home/cqiu/AIPrj/sim/sim_fxx/tb/btc/qst_vrd_nuvm_vvd1602_nhls_tc1_lzw/tb_lzw_top.v(33)
+#    Time: 12716 ns  Iteration: 1  Instance: /tb_lzw_top
+# Memory Statistics                         
+#     mem: size of vopt process (VSZ)            290.44 Mb
+#     mem: size after elab (VSZ)                 411.64 Mb
+#     mem: size during sim (VSZ)                 552.40 Mb
+# Vopt Time                                 
+#    vopt: wall time                               1.05 s
+#    vopt: cpu time                                0.87 s
+# Elaboration Time                          
+#    elab: wall time                               1.68 s
+#    elab: cpu time                                0.74 s
+# Simulation Time                           
+#     sim: wall time                               6.25 s
+#     sim: cpu time                                1.67 s
+# Total Time                                
+#   total: wall time                               8.98 s
+#   total: cpu time                                3.28 s
+# 
+# End time: 23:40:07 on Feb 17,2019, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 5
